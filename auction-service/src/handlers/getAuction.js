@@ -16,7 +16,7 @@ async function getAuction(event, context) {
       })
       .promise();
 
-    auction = result;
+    auction = result.Item;
   } catch (error) {
     console.log(error);
     throw new createError.InternalServerError(error);
@@ -28,7 +28,7 @@ async function getAuction(event, context) {
 
   return {
     statusCode: 201,
-    body: JSON.stringify(auctions),
+    body: JSON.stringify(auction),
   };
 }
 

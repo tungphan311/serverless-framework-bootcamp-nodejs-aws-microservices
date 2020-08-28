@@ -38,7 +38,7 @@ functions:
     events:
       - http:
           method: GET
-          path: /auctions/{id}
+          path: /auction/{id}
 
 custom:
   AuctionsTable:
